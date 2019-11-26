@@ -1,8 +1,8 @@
-function selectionSort(arr: number[], i: number, j: number, minIndex: number): number[] {
+function selectionSort(arr: number[], i: number, j: number): number[] {
     if (i == arr.length - 1)
         return array;
 
-    minIndex = i;
+    var minIndex = i;
 
     if (arr[minIndex] > arr[j]) {
         minIndex = j;
@@ -13,13 +13,13 @@ function selectionSort(arr: number[], i: number, j: number, minIndex: number): n
 
     if (j == arr.length - 1) {
         j = i;
-        return selectionSort(arr, ++i, ++j, minIndex);
+        return selectionSort(arr, ++i, ++j);
     }
-    return selectionSort(arr, i, ++j, minIndex);
+    return selectionSort(arr, i, ++j);
 }
 
 var array: number[] = [3, 1, 8, 7];
 
 console.log('array:', array);
-var newArray: number[] = selectionSort(array, 0, 1, 0);
+var newArray: number[] = selectionSort(array, 0, 1);
 console.log('newArray:', newArray);

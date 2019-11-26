@@ -7,9 +7,9 @@ and prints parallel pairs' sums.
 */
 
 function paraPrint(arr: number[], start: number, end: number): void {
-    var gap: number = end - start; 
+    var gap: number = end - start;
     var sum = 0;
-    
+
     if (gap == 0) {
         console.log(arr[start]);
         return;
